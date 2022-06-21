@@ -16,22 +16,23 @@
 </head>
 
 <body>
-	<img src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg" alt="HTML5 Icon" style="width:505px;height:330px;">
+
+	<img src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg" alt="Turquoise-transparent sea coast. On the horizon line of the left side, an island is visible and next to it, a little to the right, a sunset, the rays of which are reflected on the sea." title="Sea with sunset view" style="width:505px;height:330px;">
 	<h1>Lorem Ipsum</h1>
 	<p>
 		Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.
 	</p>
+	<button id="button" onclick="modalEvent('block'); getNumberOfClicks();">Button</button><br>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<button id="clearButton" onclick="clearCounter();">Clear</button><br>
+			<span class="close" onclick="modalEvent('none');" tabindex=0>&times;</span>
+			<div class="modal_title">Alert!</div>
+			<div class="modal_text" id="modalText">
+			</div>
 
-	<input type="button" onclick="location.href='#popup';" value="Button" />
-	<a href="#popup" class="header_phone popup-link"></a>
-	<div id="popup" class="popup">
-		<a href="#" class="popup_area"></a>
-	<div class="popup_body">
-		<div class="popup_content">
-			<a href="#" class="popup_close">X</a>
-			<div class="popup_title">Alert!</div>
-				<div class="popup_text">You have clicked X times to related button.</div>
-		</div>
 		</div>
 	</div>
 </body>
+
+</html>

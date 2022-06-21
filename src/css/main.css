@@ -66,11 +66,8 @@ p {
 	color: #000000;
 }
 
-input {
-	/* Medium length displa */
+#button {
 	/* button */
-
-	/* Auto layout */
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -83,83 +80,58 @@ input {
 	left: 830px;
 	top: 338px;
 
-	/* Primary #1 */
+
 	background: #E4C1AE;
+	border: none;
 	border-radius: 32px;
-text-decoration: none;
-	/* Button Text */
+
+
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 100%;
-	/* identical to box height, or 16px */
+	
 
 	color: #FFFFFF;
 
-	/* Inside auto layout */
+	
 	flex: none;
 	order: 0;
 	flex-grow: 0;
 }
 
-.popup {
-position: relative;
-width: 1440px;
-height: 960px;
-background-color: rgba(0,0,0,0.8);
-opacity: 0.5;
-visibility: hidden;
-
-
-}
-.popup:target {
-	opacity: 1;
-	visibility: visible;
-
-}
-.poput_area {
-	position: absolute;
+.modal {
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	left: 0px;
 	top: 0px;
-
-	/* Dark #1 */
-	background: #121212;
-	opacity: 0.5;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
-.popup_body {
-width: 920px;
-height: 210px;
-left: 260px;
-top: 375px;
-display: flex;
-
-}
-
-.popup_content {
-background: #FFFFFF;
-position: relative;
-width: 920px;
-height: 210px;
-left: 260px;
-top: 375px;
+.modal-content {
+	background: #FFFFFF;
+	position: relative;
+	width: 920px;
+	height: 210px;
+	left: 260px;
+	top: 375px;
 
 }
 
-.popup_close {
+.modal_close {
 	/* x-icon */
-position:absolute;
+	position: absolute;
 	right: 10px;
-	top:10px;
+	top: 10px;
 	font-size: 20px;
 	color: black;
 	text-decoration: none;
 }
 
-.popup_title {
+.modal_title {
 	position: absolute;
 	width: 380px;
 	height: 50px;
@@ -175,21 +147,69 @@ position:absolute;
 	color: #121212;
 }
 
-.popup_text {
+.modal_text {
 	position: absolute;
 	width: 380px;
 	height: 24px;
 	left: calc(50% - 380px/2 - 175px);
 	top: calc(50% - 24px/2 + 37px);
 
-	/* Body Copy */
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 150%;
-	/* identical to box height, or 24px */
 
-	/* Dark #1 */
-	color: #121212;
+}
+
+#clearButton {
+	display: none;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 10px;
+
+	position: absolute;
+	width: 60px;
+	height: 25px;
+	left: 475px;
+	top: 128px;
+
+	background: #E4C1AE;
+	border: none;
+	border-radius: 32px;
+
+	/* Button Text */
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 100%;
+
+	color: #FFFFFF;
+
+	/* Inside auto layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }
